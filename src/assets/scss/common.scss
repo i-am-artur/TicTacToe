@@ -1,0 +1,104 @@
+@import './variables';
+
+:root {
+  --quantityRowsAndColumns: #{$quantityRowsAndColumns};
+  --gamepadWidth: #{$gamepadWidth};
+}
+
+.main-heading {
+  text-align: center;
+}
+
+.gamepad {
+  position: relative;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 3rem;
+}
+
+.cell {
+  position: relative;
+  display: table-cell;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+  width: calc(var(--gamepadWidth) / 3);
+  height: calc(var(--gamepadWidth) / 3);
+
+  &:after {
+    content: '';
+    visibility: hidden;
+  }
+
+  &_right-boarder {
+    border-right: 1px solid black;
+  }
+
+  &_bottom-border {
+    border-bottom: 1px solid black;
+  }
+}
+
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: var(--gamepadWidth);
+  justify-content: space-around;
+  font-size: 2rem;
+}
+
+.red-line {
+  display: none;
+  position: absolute;
+  background-color: red;
+
+  &_horizontal {
+    display: block;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translate(0, 50%);
+    height: 5px;
+  }
+
+  &_vertical {
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translate(50%);
+    width: 5px;
+  }
+
+  &_topToBottom {
+    display: block;
+    top: -27px;
+    bottom: -27px;
+    left: 50%;
+    transform: rotate(-45deg);
+    width: 5px;
+  }
+
+  &_bottomToTop {
+    display: block;
+    top: -27px;
+    bottom: -27px;
+    left: 50%;
+    transform: rotate(45deg);
+    width: 5px;
+  }
+}
+
+.game-options {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  width: var(--gamepadWidth);
+  margin-top: 15px;
+}
+
+.btn {
+  font-size: 2rem;
+}
