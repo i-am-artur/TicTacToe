@@ -1,7 +1,9 @@
-import {htmlToElement, addClassToElement, getCssVariable} from './helpers';
+// import {htmlToElement, addClassToElement, getCssVariable} from './helpers';
+import {htmlToElement, addClassToElement} from './helpers';
 import {Players} from './players';
 
-const QUANTITY_ROWS_AND_COLS = getCssVariable('quantityRowsAndColumns');
+// const QUANTITY_ROWS_AND_COLS = getCssVariable('quantityRowsAndColumns');
+const QUANTITY_ROWS_AND_COLS = 3;
 let model = null;
 
 export function createGamePad(modelArg) {
@@ -18,6 +20,10 @@ export function createGamePad(modelArg) {
 
   let newGameEvent = () => startNewGame(commonData);
   model.eventBus.subscribe(model.eventBus.channelOptions.newGame, newGameEvent);
+
+  // if(gamepad.innerHTML === '') {
+  //   location.reload();
+  // }
 
   return gamepad;
 }

@@ -6,9 +6,12 @@
   },
   "parserOptions": {
     "sourceType": "module",
-    "ecmaVersion": 2018
+    "ecmaVersion": 6,
+    "parser": "@babel/eslint-parser",
+    "allowImportExportEverywhere": true
   },
   "rules": {
+    "allowImportExportEverywhere": 0,
     "no-console": "off",
     "no-extra-parens": ["error", "all"],
     "array-callback-return": "error",
