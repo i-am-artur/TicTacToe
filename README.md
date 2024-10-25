@@ -1,4 +1,7 @@
 # Tic Tac Toe game
+
+<img width="100px" src="https://github.com/i-am-artur/I-am-artur/blob/master/images/tictactoe.jpg">
+
 Tech stack:
 - JS (MVC and EventBus)
 - HTML, SCSS\CSS
